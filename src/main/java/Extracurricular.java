@@ -1,6 +1,6 @@
 public class Extracurricular{
-  protected String name;
-  protected String supervisor;
+  private String name;
+  private String supervisor;
 
   Extracurricular(String aName, String aSupervisor){
     name = aName;
@@ -10,9 +10,13 @@ public class Extracurricular{
   public String getName(){
     return name;
   }
+
+  public String getSupervisor(){
+    return supervisor;
+  }
   
   public void displayInfo(){
-    System.out.println("Activity: " + name);
+    System.out.println("Club: " + name);
     System.out.println("Supervisor: " + supervisor);
   }
 }

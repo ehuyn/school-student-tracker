@@ -5,7 +5,7 @@ public class Sport extends Extracurricular{
   }
   
   public void displayInfo(){
-    System.out.println("Sport: " + name);
-    System.out.println("Coach: " + supervisor);
+    System.out.println("Sport: " + getName());
+    System.out.println("Coach: " + getSupervisor());
   }
 }
