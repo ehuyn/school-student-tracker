@@ -1,13 +1,14 @@
 import java.util.ArrayList;
 
 public class Student{
-  private int studentID;
-  private String name;
-  private int grade;
   public ArrayList<Course> courseList = new ArrayList<Course>();
   private ArrayList<Award> awardsList = new ArrayList<Award>();
   private ArrayList<Sport> sportsList = new ArrayList<Sport>();
   private ArrayList<Club> clubList = new ArrayList<Club>();
+  
+  private int studentID;
+  private String name;
+  private int grade;
 
   Student(int id, String aName, int aGrade){
     studentID = id;
@@ -50,7 +51,7 @@ public class Student{
     }
   }
 
-  // Output Info
+  // Output information
   public void outputStudentInfo(){
     System.out.println("---STUDENT INFO---");
     System.out.println("Student: " + name);

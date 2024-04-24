@@ -1,4 +1,3 @@
-
 public class Main {
   public static void main(String[] args) {
     Student student = new Student(338656309, "Emily Huynh", 12);
@@ -21,7 +20,9 @@ public class Main {
     student.addCourse(courseA);
     student.addCourse(courseB);
     student.addCourse(courseC);
-    
+
+    // Course marks are set after course instantiation, 
+    // as course marks are added later on (after student enrollment)
     student.setCourseMark("SPH4U", 94);
     student.setCourseMark("ICS4U", 98.42);
     student.setCourseMark("MCV4U", 98);
