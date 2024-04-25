@@ -15,7 +15,8 @@ public class Main {
 
     Club club1 = new Club("Mathletes", "Ms. Lim");
     Club club2 = new Club("Science Club", "Ms. Wilkinson");
-    Club club3 = new Club("Peer Tutoring", "Ms. Kilfoil");
+    
+    Extracurricular volunteer = new Extracurricular("Peer Tutoring", "Ms. Kilfoil");
 
     student.addCourse(courseA);
     student.addCourse(courseB);
@@ -30,13 +31,13 @@ public class Main {
     student.addAward(award1);
     student.addAward(award2);
 
-    student.addSport(sport1);
-    student.addSport(sport2);
-    student.addSport(sport3);
+    student.addExracurricular(sport1);
+    student.addExracurricular(sport2);
+    student.addExracurricular(sport3);
 
-    student.addClub(club1);
-    student.addClub(club2);
-    student.addClub(club3);
+    student.addExracurricular(club1);
+    student.addExracurricular(club2);
+    student.addExracurricular(volunteer);
 
     student.outputStudentInfo();
     student.outputCourses();

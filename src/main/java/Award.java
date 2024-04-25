@@ -7,10 +7,6 @@ public class Award{
     description = aDescription;
   }
 
-  public String getTitle(){
-    return title;
-  }
-
   public void displayInfo(){
     System.out.println("Award: " + title);
     System.out.println("Description: " + description);

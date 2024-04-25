@@ -3,8 +3,7 @@ import java.util.ArrayList;
 public class Student{
   public ArrayList<Course> courseList = new ArrayList<Course>();
   private ArrayList<Award> awardsList = new ArrayList<Award>();
-  private ArrayList<Sport> sportsList = new ArrayList<Sport>();
-  private ArrayList<Club> clubList = new ArrayList<Club>();
+  private ArrayList<Extracurricular> extracurricularList = new ArrayList<Extracurricular>();
   
   private int studentID;
   private String name;
@@ -13,15 +12,7 @@ public class Student{
   Student(int id, String aName, int aGrade){
     studentID = id;
     name = aName;
-    grade = aGrade;
-  }
-
-  public String getStudentName(){
-    return name;
-  }
-
-  public int getGrade(){
-    return grade;
+    grade = aGrade;  
   }
   
   // Add student data
@@ -33,12 +24,8 @@ public class Student{
     awardsList.add(award);
   }
 
-  public void addSport(Sport sport){
-    sportsList.add(sport);
-  }
-  
-  public void addClub(Club club){
-    clubList.add(club);
+  public void addExracurricular(Extracurricular activity){
+      extracurricularList.add(activity);
   }
 
   // Set course marks
@@ -80,12 +67,8 @@ public class Student{
 
   public void outputExtracurriculars(){
     System.out.println("---EXTRACURRICULARS---");
-    for(Sport sport : sportsList){
-      sport.displayInfo();
-      System.out.println();
-    }
-    for(Club club : clubList){
-      club.displayInfo();
+    for(Extracurricular activity : extracurricularList){
+      activity.displayInfo();
       System.out.println();
     }
     System.out.println();
