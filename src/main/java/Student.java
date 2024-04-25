@@ -78,7 +78,7 @@ public class Student{
   private int calculateOverallAvg(){
     double sum = 0;
     for(Course course : courseList){
-      sum += course.getAvg();
+      sum += (int)(course.getAvg()+0.5);
     }
     return (int)(sum/courseList.size()+0.5);
   }
