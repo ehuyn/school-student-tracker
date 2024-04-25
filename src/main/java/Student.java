@@ -80,6 +80,6 @@ public class Student{
     for(Course course : courseList){
       sum += course.getAvg();
     }
-    return (int)(sum/(double)courseList.size()+0.5);
+    return (int)(sum/courseList.size()+0.5);
   }
 }

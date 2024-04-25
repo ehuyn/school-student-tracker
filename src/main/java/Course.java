@@ -26,6 +26,6 @@ public class Course{
     System.out.println("Course code: " + courseCode);
     System.out.println("Course name: " + name);
     System.out.println("Teacher: " + teacher);
-    if(average > 0){System.out.println("Average: " + average);}
+    if(average > 0){System.out.println("Average: " + (int)(average+0.5));}
   }
 }
