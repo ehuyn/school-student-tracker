@@ -16,7 +16,7 @@ public class Extracurricular{
   }
   
   public void displayInfo(){
-    System.out.println("Activity: " + name);
-    System.out.println("Supervisor: " + supervisor);
+    System.out.println("Activity: " + getName());
+    System.out.println("Supervisor: " + getSupervisor());
   }
 }

@@ -10,22 +10,30 @@ public class Course{
     teacher = aTeacher;
   }
 
-  public double getAvg(){
-    return average;
-  }
-
-  public String getCode(){
+  public String getCourseCode(){
     return courseCode;
   }
 
-  public void setAvg(double avg){
+  public String getName(){
+    return name;
+  }
+  
+  public String getTeacher(){
+    return teacher;
+  }
+  
+  public double getAverage(){
+    return average;
+  }
+
+  public void setAverage(double avg){
     average = avg;
   }
 
   public void displayInfo(){
-    System.out.println("Course code: " + courseCode);
-    System.out.println("Course name: " + name);
-    System.out.println("Teacher: " + teacher);
-    if(average > 0){System.out.println("Average: " + (int)(average+0.5));}
+    System.out.println("Course code: " + getCourseCode());
+    System.out.println("Course name: " + getName());
+    System.out.println("Teacher: " + getTeacher());
+    if(average > 0){System.out.println("Average: " + (int)(getAverage()+0.5));}
   }
 }

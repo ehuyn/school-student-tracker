@@ -14,6 +14,18 @@ public class Student{
     name = aName;
     grade = aGrade;  
   }
+
+  public int getStudentID(){
+    return studentID;
+  }
+  
+  public String getName(){
+    return name;
+  }
+
+  public int getGrade(){
+    return grade;
+  }
   
   // Add student data
   public void addCourse(Course course){
@@ -31,8 +43,8 @@ public class Student{
   // Set course marks
   public void setCourseMark(String courseCode, double mark){
     for(Course course : courseList){
-      if(course.getCode().equals(courseCode)){
-        course.setAvg(mark);
+      if(course.getCourseCode().equals(courseCode)){
+        course.setAverage(mark);
         return;
       }
     }
@@ -41,9 +53,9 @@ public class Student{
   // Output information
   public void outputStudentInfo(){
     System.out.println("---STUDENT INFO---");
-    System.out.println("Student: " + name);
-    System.out.println("ID: " + studentID);
-    System.out.println("Grade: " + grade);
+    System.out.println("Student: " + getName());
+    System.out.println("ID: " + getStudentID());
+    System.out.println("Grade: " + getGrade());
     System.out.println("Overall Average: " + calculateOverallAvg() + "\n\n");
   }
 
@@ -78,7 +90,7 @@ public class Student{
   private int calculateOverallAvg(){
     double sum = 0;
     for(Course course : courseList){
-      sum += (int)(course.getAvg()+0.5);
+      sum += (int)(course.getAverage()+0.5);
     }
     return (int)(sum/courseList.size()+0.5);
   }
