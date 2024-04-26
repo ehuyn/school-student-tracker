@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 
 public class Student{
-  public ArrayList<Course> courseList = new ArrayList<Course>();
+  private ArrayList<Course> courseList = new ArrayList<Course>();
   private ArrayList<Award> awardsList = new ArrayList<Award>();
   private ArrayList<Extracurricular> extracurricularList = new ArrayList<Extracurricular>();
+  private ArrayList<Double> courseAverages = new ArrayList<Double>();
   
   private int studentID;
   private String name;
@@ -30,21 +31,22 @@ public class Student{
   // Add student data
   public void addCourse(Course course){
     courseList.add(course);
+    courseAverages.add(0.0);
   }
   
   public void addAward(Award award){
     awardsList.add(award);
   }
 
-  public void addExracurricular(Extracurricular activity){
+  public void addExtracurricular(Extracurricular activity){
       extracurricularList.add(activity);
   }
 
   // Set course marks
   public void setCourseMark(String courseCode, double mark){
-    for(Course course : courseList){
-      if(course.getCourseCode().equals(courseCode)){
-        course.setAverage(mark);
+    for(int x = 0; x < courseList.size(); x++){
+      if(courseList.get(x).getCourseCode().equals(courseCode)){
+        courseAverages.set(x, mark);
         return;
       }
     }
@@ -63,7 +65,7 @@ public class Student{
     System.out.println("-----COURSES-----");
     for(Course course : courseList){
       course.displayInfo();
-      System.out.println();
+      System.out.println("Mark: " + (int)(courseAverages.get(courseList.indexOf(course))+0.5) + "\n");
     }
     System.out.println();
   }
@@ -89,9 +91,9 @@ public class Student{
   // Calculations
   private int calculateOverallAvg(){
     double sum = 0;
-    for(Course course : courseList){
-      sum += (int)(course.getAverage()+0.5);
+    for(int x = 0; x < courseAverages.size(); x++){
+      sum += (int)(courseAverages.get(x)+0.5);
     }
-    return (int)(sum/courseList.size()+0.5);
+    return (int)(sum/courseAverages.size()+0.5);
   }
 }
